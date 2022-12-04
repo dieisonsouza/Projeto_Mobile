@@ -1,5 +1,3 @@
-// Em breve um codigo aqui   
-
 const wdio = require('webdriverio');
 const caps = {
               "platformName":"Android",
