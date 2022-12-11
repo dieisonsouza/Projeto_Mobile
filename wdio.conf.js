@@ -43,7 +43,8 @@ exports.config = {
     ],
     // Patterns to exclude.
     exclude: [
-        './features/**/login.feature'
+        './features/**/login.feature',
+        './features/**/selecionarProduto.feature'
     ],
     //
     // ============
@@ -68,7 +69,7 @@ exports.config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{  
-        "platformName":"Android",
+        /*"platformName":"Android",
         "appium:platformVersion":"9.0",
         "appium:appiumVersion":"1.22.0",
         "appium:deviceName":"Samsung Galaxy S9 FHD GoogleAPI Emulator",
@@ -80,6 +81,20 @@ exports.config = {
         "appium:nativeWebScreenshot":true,
         "sauce:options":{"name":"Appium Aula Final"},
         "appium:newCommandTimeout":3600,
+        "appium:connectHardwareKeyboard":true
+        */
+        "platformName": "Android",
+        "appium:platformVersion": "9.0",
+        "appium:deviceName": "Galaxy S9 FHD GoogleAPI Emulator",
+        "appium:deviceOrientation": "portrait",
+        "appium:app": "storage:filename=Calculator_8.3 (477856174)_Apkpure.apk",
+        "appium:appPackage": "com.google.android.calculator",
+        "appium:appActivity": "com.android.calculator2.Calculator",
+        "browserName": "",
+        "appium:ensureWebviewsHavePages": "true",
+        "appium:nativeWebScreenshot":true,
+        "sauce:options":{"name":"Appium Aula Calculadora"},
+        "appium:newCommandTimeout":60000,
         "appium:connectHardwareKeyboard":true
     }],
     //
